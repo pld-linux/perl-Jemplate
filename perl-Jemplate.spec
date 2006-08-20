@@ -23,6 +23,8 @@ BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
 BuildRequires:	perl-Template-Toolkit >= 2.14
 %endif
+# no arch stuff, but installs to vendorarch dir
+#BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -83,7 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc Changes README ToDo
 %attr(755,root,root) %{_bindir}/*
-%{perl_vendorarch}/auto/*
+%{perl_vendorarch}/auto/Jemplate
 %{perl_vendorarch}/*.pm
 %{perl_vendorarch}/Jemplate
 %{_mandir}/man3/*
