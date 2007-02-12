@@ -9,7 +9,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Jemplate
 Summary:	Jemplate - Javascript Templating with Template Toolkit
-Summary(pl.UTF-8):   Jemplate - szablony javascriptowe z użyciem Template Toolkitu
+Summary(pl.UTF-8):	Jemplate - szablony javascriptowe z użyciem Template Toolkitu
 Name:		perl-Jemplate
 Version:	0.18
 Release:	0.1
