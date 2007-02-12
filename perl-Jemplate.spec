@@ -9,7 +9,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Jemplate
 Summary:	Jemplate - Javascript Templating with Template Toolkit
-Summary(pl):	Jemplate - szablony javascriptowe z u¿yciem Template Toolkitu
+Summary(pl.UTF-8):   Jemplate - szablony javascriptowe z uÅ¼yciem Template Toolkitu
 Name:		perl-Jemplate
 Version:	0.18
 Release:	0.1
@@ -42,20 +42,20 @@ templating language!
 Combined with JSON and xmlHttpRequest, Jemplate provides a really
 simple and powerful way to do Ajax stuff.
 
-%description -l pl
-Jemplate to szkielet szablonów dla Javascriptu stworzony w oparciu o
+%description -l pl.UTF-8
+Jemplate to szkielet szablonÃ³w dla Javascriptu stworzony w oparciu o
 perlowy Template Toolkit (TT2).
 
-Jemplate analizuje szablony TT2 przy u¿yciu perlowego szkieletu TT2,
-ale z modyfikacj±: zamiast kompilowaæ szablony do kodu w Perlu,
+Jemplate analizuje szablony TT2 przy uÅ¼yciu perlowego szkieletu TT2,
+ale z modyfikacjÄ…: zamiast kompilowaÄ‡ szablony do kodu w Perlu,
 kompiluje je do Javascriptu.
 
-Jemplate udostêpnia modu³ uruchomieniowy Javascriptu do przetwarzania
-kodu szablonów. W ten sposób mamy w pe³ni funkcjonalny jêzyk szablonów
+Jemplate udostÄ™pnia moduÅ‚ uruchomieniowy Javascriptu do przetwarzania
+kodu szablonÃ³w. W ten sposÃ³b mamy w peÅ‚ni funkcjonalny jÄ™zyk szablonÃ³w
 dla Javascriptu!
 
-W po³±czeniu z JSON i xmlHttpRequest Jemplate udostêpnia naprawdê
-proste i potê¿ne metody obs³ugi technologii Ajax.
+W poÅ‚Ä…czeniu z JSON i xmlHttpRequest Jemplate udostÄ™pnia naprawdÄ™
+proste i potÄ™Å¼ne metody obsÅ‚ugi technologii Ajax.
 
 %prep
 %setup -q -n %{pdir}-%{version}
