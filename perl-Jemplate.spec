@@ -11,13 +11,13 @@
 Summary:	Jemplate - Javascript Templating with Template Toolkit
 Summary(pl.UTF-8):	Jemplate - szablony javascriptowe z użyciem Template Toolkitu
 Name:		perl-Jemplate
-Version:	0.18
+Version:	0.20
 Release:	0.1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/I/IN/INGY/%{pdir}-%{version}.tar.gz
-# Source0-md5:	8a0097f7f01fef238f308356029266e6
+# Source0-md5:	4d344f5c27543f14728a7bf24abff617
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
