@@ -12,7 +12,7 @@ Summary:	Jemplate - Javascript Templating with Template Toolkit
 Summary(pl.UTF-8):	Jemplate - szablony javascriptowe z użyciem Template Toolkitu
 Name:		perl-Jemplate
 Version:	0.20
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
