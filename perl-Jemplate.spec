@@ -6,7 +6,6 @@
 # Conditional build:
 %bcond_without	tests		# do not perform "make test"
 #
-%include	/usr/lib/rpm/macros.perl
 %define	pdir	Jemplate
 Summary:	Jemplate - Javascript Templating with Template Toolkit
 Summary(pl.UTF-8):	Jemplate - szablony javascriptowe z użyciem Template Toolkitu
