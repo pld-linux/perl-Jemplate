@@ -1,6 +1,5 @@
 #
 # TODO:
-#  - should probably install itself into vendorlib dir, not vendorarch
 #  - ajax example does not work
 #
 # Conditional build:
@@ -10,21 +9,21 @@
 Summary:	Jemplate - Javascript Templating with Template Toolkit
 Summary(pl.UTF-8):	Jemplate - szablony javascriptowe z użyciem Template Toolkitu
 Name:		perl-Jemplate
-Version:	0.20
-Release:	2
+Version:	0.30
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/I/IN/INGY/%{pdir}-%{version}.tar.gz
-# Source0-md5:	4d344f5c27543f14728a7bf24abff617
+# Source0-md5:	e15dcb33efed26ab2e23297897ea777e
 URL:		http://search.cpan.org/dist/Jemplate/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
-BuildRequires:	perl-Template-Toolkit >= 2.14
+BuildRequires:	perl-Template-Toolkit >= 2.25
+BuildRequires:	perl-File-Find-Rule >= 0.33
 %endif
-# no arch stuff, but installs to vendorarch dir
-#BuildArch:	noarch
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -73,20 +72,18 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/share
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 cp -a examples $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-cp $RPM_BUILD_ROOT%{perl_vendorarch}/auto/Jemplate/Jemplate.js \
-	$RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}/share
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes README ToDo
+%doc Changes README
 %attr(755,root,root) %{_bindir}/*
-%{perl_vendorarch}/auto/Jemplate
-%{perl_vendorarch}/*.pm
-%{perl_vendorarch}/Jemplate
+%{perl_vendorlib}/Jemplate.pm
+%{perl_vendorlib}/Jemplate
+%{_mandir}/man1/jemplate.1p*
 %{_mandir}/man3/*
 %{_examplesdir}/%{name}-%{version}
